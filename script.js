@@ -1,4 +1,4 @@
-const ADMIN_PASSWORD = "rolll-admin-2026";
+const ADMIN_PASSWORD = "220245489";
 
 const openLoginButton = document.getElementById("openLoginButton");
 const closeLoginButton = document.getElementById("closeLoginButton");

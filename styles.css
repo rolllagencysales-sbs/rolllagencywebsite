@@ -1,6 +1,6 @@
 :root {
-  --bg-top: #e9ece8;
-  --bg-bottom: #cfd7d1;
+  --bg-top: #d8dfd9;
+  --bg-bottom: #aebbb3;
   --card: rgba(255, 251, 246, 0.78);
   --card-strong: #f8f3ec;
   --card-soft: rgba(73, 60, 46, 0.05);
@@ -23,8 +23,9 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
   color: var(--text);
   background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.82), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(92, 111, 102, 0.12), transparent 24%),
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.34), transparent 24%),
+    radial-gradient(circle at bottom right, rgba(92, 111, 102, 0.1), transparent 22%),
+    radial-gradient(circle at center right, rgba(49, 67, 61, 0.08), transparent 28%),
     linear-gradient(160deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
 }
 
@@ -111,6 +112,23 @@ h2 {
   flex-wrap: wrap;
 }
 
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-logo {
+  width: 74px;
+  height: 74px;
+  object-fit: contain;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(49, 67, 61, 0.12);
+  padding: 8px;
+  box-shadow: 0 18px 40px rgba(49, 67, 61, 0.08);
+}
+
 .hero-badge {
   padding: 10px 14px;
   border-radius: 999px;
@@ -168,6 +186,42 @@ h2 {
   color: var(--accent-strong);
 }
 
+.contact-list {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-list a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--accent-strong);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-icon {
+  width: 34px;
+  height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(92, 111, 102, 0.1);
+  border: 1px solid rgba(49, 67, 61, 0.1);
+  flex-shrink: 0;
+}
+
+.contact-icon svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--accent-strong);
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
 .status-row,
 .admin-panel__header {
   margin-top: 36px;
@@ -194,6 +248,7 @@ h2 {
   border-radius: 50%;
   background: var(--accent);
   box-shadow: 0 0 0 8px var(--accent-soft);
+  animation: statusPulse 2.8s ease-in-out infinite;
 }
 
 .ghost-button,
@@ -335,6 +390,28 @@ h2 {
 
 .hidden {
   display: none !important;
+}
+
+@keyframes statusPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(92, 111, 102, 0.1);
+  }
+
+  35% {
+    transform: scale(1.12);
+    box-shadow: 0 0 0 9px rgba(92, 111, 102, 0.08);
+  }
+
+  65% {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 13px rgba(92, 111, 102, 0.05);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(92, 111, 102, 0);
+  }
 }
 
 @media (max-width: 820px) {
