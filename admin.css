@@ -228,6 +228,7 @@ h3 {
 
 .contact-page .section-heading {
   margin-bottom: 30px;
+  max-width: 680px;
 }
 
 .contact-page .section-heading h1 {
@@ -237,6 +238,10 @@ h3 {
 
 .contact-page .section-heading .lead {
   animation: riseIn 820ms ease 160ms both;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .contact-grid {
