@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rolll Agency | Cok Yakinda</title>
+    <title>Rolll Agency | Çok Yakında</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=Manrope:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -15,21 +15,45 @@
   <body>
     <main class="page-shell">
       <section class="hero-card" id="comingSoonPanel">
-        <p class="eyebrow">Rolll Agency</p>
-        <h1>Cok Yakinda</h1>
-        <p class="lead">
-          Yeni nesil yaratici kampanyalar, cesur marka hikayeleri ve daha fazlasi
-          cok yakinda burada.
-        </p>
+        <div class="hero-topline">
+          <p class="eyebrow">Rolll Agency</p>
+          <div class="hero-badge">Bursa merkezli yaratıcı ajans</div>
+        </div>
 
-        <div class="status-row">
-          <div class="status-pill">
-            <span class="dot"></span>
-            Web sitesi yapim asamasinda
+        <div class="hero-layout">
+          <div class="hero-copy">
+            <h1>Çok Yakında</h1>
+            <p class="lead">
+              Rolll Agency için hazırladığımız yeni dijital deneyim çok yakında
+              yayında olacak. Marka stratejisi, yaratıcı iletişim ve seçkin
+              prodüksiyon yaklaşımımızı daha güçlü bir sunumla buluşturuyoruz.
+            </p>
+
+            <div class="status-row">
+              <div class="status-pill">
+                <span class="dot"></span>
+                Web sitesi yayına hazırlanmaktadır
+              </div>
+              <button class="ghost-button" id="openLoginButton" type="button">
+                Admin Girişi
+              </button>
+            </div>
           </div>
-          <button class="ghost-button" id="openLoginButton" type="button">
-            Admin Girisi
-          </button>
+
+          <aside class="info-panel" aria-label="Ajans özeti">
+            <div class="info-item">
+              <span class="info-label">Odak</span>
+              <strong>Marka, kampanya ve dijital deneyim tasarımı</strong>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Yaklaşım</span>
+              <strong>Sade, stratejik ve yüksek estetik standart</strong>
+            </div>
+            <div class="info-item">
+              <span class="info-label">Lansman</span>
+              <strong>Yeni web sitesi çok yakında erişime açılacak</strong>
+            </div>
+          </aside>
         </div>
       </section>
 
@@ -37,28 +61,28 @@
         <div class="admin-panel__header">
           <div>
             <p class="eyebrow">Rolll Agency</p>
-            <h2>Admin alani acildi</h2>
+            <h2>Yönetim alanı açıldı</h2>
           </div>
           <button class="ghost-button" id="logoutButton" type="button">
-            Cikis Yap
+            Çıkış Yap
           </button>
         </div>
 
         <div class="admin-grid">
           <article class="admin-card">
             <p class="card-label">Durum</p>
-            <strong>Yayin oncesi hazirlik</strong>
-            <p>Site herkese kapali, sadece admin goruntulemesi aktif.</p>
+            <strong>Yayın öncesi hazırlık</strong>
+            <p>Site ziyaretçilere kapalı, yalnızca yönetici görünümü aktif.</p>
           </article>
           <article class="admin-card">
             <p class="card-label">Ajans Notu</p>
-            <strong>Rolll Agency lansmana hazirlaniyor</strong>
-            <p>Bu alan daha sonra gercek admin paneline baglanabilir.</p>
+            <strong>Rolll Agency lansmana hazırlanıyor</strong>
+            <p>Bu alan daha sonra gerçek bir yönetim paneline bağlanabilir.</p>
           </article>
           <article class="admin-card">
-            <p class="card-label">Sonraki Adim</p>
+            <p class="card-label">Sonraki Adım</p>
             <strong>CMS veya backend entegrasyonu</strong>
-            <p>Guvenli sifre kontrolu icin sunucu tarafli dogrulama eklenmeli.</p>
+            <p>Güvenli şifre kontrolü için sunucu taraflı doğrulama eklenmeli.</p>
           </article>
         </div>
       </section>
@@ -70,28 +94,28 @@
         <button class="close-button" id="closeLoginButton" type="button" aria-label="Kapat">
           x
         </button>
-        <p class="eyebrow">Yetkili Girisi</p>
-        <h2 id="loginTitle">Admin sifresi gerekli</h2>
+        <p class="eyebrow">Yetkili Girişi</p>
+        <h2 id="loginTitle">Admin şifresi gerekli</h2>
         <p class="modal-copy">
-          Yonetim alanini acmak icin admin sifresini girin.
+          Yönetim alanını açmak için admin şifresini girin.
         </p>
 
         <form id="loginForm" class="login-form">
-          <label for="passwordInput">Sifre</label>
+          <label for="passwordInput">Şifre</label>
           <input
             id="passwordInput"
             name="password"
             type="password"
-            placeholder="Admin sifrenizi girin"
+            placeholder="Admin şifrenizi girin"
             autocomplete="current-password"
             required
           />
           <button class="primary-button" type="submit">Panele Gir</button>
           <p class="helper-text">
-            Demo sifre: <code>rolll-admin-2026</code>
+            Demo şifre: <code>rolll-admin-2026</code>
           </p>
           <p class="error-text hidden" id="errorMessage">
-            Sifre hatali. Lutfen tekrar deneyin.
+            Şifre hatalı. Lütfen tekrar deneyin.
           </p>
         </form>
       </div>
