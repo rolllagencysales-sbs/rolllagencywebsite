@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rolll Agency | Admin Ana Sayfa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=3" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body data-page="home">
+    <div class="admin-shell">
+      <main class="content">
+        <header class="topbar">
+          <div class="topbar__brand">
+            <img src="assets/rolll-logo.png" alt="Rolll Agency logosu" />
+            <div>
+              <p>Rolll Agency</p>
+              <span>Admin Ön İzleme</span>
+            </div>
+          </div>
+          <nav class="topbar__nav" aria-label="Admin menü">
+            <a class="topbar__link is-active" href="home.html">Ana Sayfa</a>
+            <a class="topbar__link" href="contact.html">İletişim</a>
+          </nav>
+          <button class="topbar__logout" id="logoutButton" type="button">Çıkış Yap</button>
+        </header>
+
+        <section class="services services--showcase">
+          <div class="section-heading">
+            <div class="section-chip">Sizin İçin Neler Yapabiliriz?</div>
+            <h1>Dijital Ajans Hizmetleri</h1>
+            <p class="lead lead--center">
+              İşinizi dijitalde büyütmek için buradayız. Stratejik yaklaşımımız, yaratıcı
+              tasarımlarımız ve yazılımsal gücümüzle markanıza özel çözümler sunuyoruz.
+            </p>
+          </div>
+
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img">
+                  <path
+                    d="M4 5.5h16A1.5 1.5 0 0 1 21.5 7v10A1.5 1.5 0 0 1 20 18.5H4A1.5 1.5 0 0 1 2.5 17V7A1.5 1.5 0 0 1 4 5.5Zm0 1.5V17h16V7H4Zm3 13h10v1.5H7V20Z"
+                  />
+                </svg>
+              </div>
+              <div class="service-card__body">
+                <p class="service-label">Web Sitesi Tasarımı</p>
+                <h3>Web Tasarımı ve Geliştirme</h3>
+                <p>
+                  Kullanıcı dostu, mobil uyumlu ve revizyona açık web siteleriyle dijital
+                  dünyadaki görünürlüğünüzü güçlendiriyoruz. SEO altyapısını da planlayarak daha
+                  güçlü bir dijital vitrin kuruyoruz.
+                </p>
+                <a class="primary-link" href="contact.html">Teklif Al</a>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img">
+                  <path
+                    d="M10 3.5h4v3h4.5A1.5 1.5 0 0 1 20 8v3.5h-1.5V8H13.5v3h-3V8H5.5v3.5H4V8A1.5 1.5 0 0 1 5.5 6.5H10v-3Zm-4 9h4A1.5 1.5 0 0 1 11.5 14v4A1.5 1.5 0 0 1 10 19.5H6A1.5 1.5 0 0 1 4.5 18v-4A1.5 1.5 0 0 1 6 12.5Zm8 0h4a1.5 1.5 0 0 1 1.5 1.5v4a1.5 1.5 0 0 1-1.5 1.5h-4a1.5 1.5 0 0 1-1.5-1.5v-4A1.5 1.5 0 0 1 14 12.5Z"
+                  />
+                </svg>
+              </div>
+              <div class="service-card__body">
+                <p class="service-label">Yapay Zeka Otomasyonları</p>
+                <h3>Özel Yazılım Çözümleri</h3>
+                <p>
+                  İş süreçlerinizi dijitale taşıyan, size özel işlevsel ve ölçeklenebilir
+                  çözümler sunuyoruz. Günlük yükü azaltan bu sistemler, işinizi daha akıcı hale
+                  getirir.
+                </p>
+                <a class="primary-link" href="contact.html">Teklif Al</a>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img">
+                  <path
+                    d="M5.5 4h13A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-13A1.5 1.5 0 0 1 5.5 4Zm0 1.5v13h13v-13h-13Zm2 3h6v1.5h-6V8.5Zm0 3h9V13h-9v-1.5Zm0 3h5V16h-5v-1.5Z"
+                  />
+                </svg>
+              </div>
+              <div class="service-card__body">
+                <p class="service-label">Kurumsal Kimlik Tasarımı</p>
+                <h3>Marka Kimliği Tasarımı</h3>
+                <p>
+                  Markanızın karakterini yansıtan, tutarlı ve profesyonel bir görsel dil
+                  oluşturuyoruz. Kartvizit, bloknot ve diğer kurumsal materyallerde güçlü bir
+                  kimlik sunuyoruz.
+                </p>
+                <a class="primary-link" href="contact.html">Teklif Al</a>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="admin.js"></script>
+  </body>
+</html>

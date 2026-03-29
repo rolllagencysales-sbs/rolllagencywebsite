@@ -9,7 +9,6 @@ const loginForm = document.getElementById("loginForm");
 const passwordInput = document.getElementById("passwordInput");
 const errorMessage = document.getElementById("errorMessage");
 const comingSoonPanel = document.getElementById("comingSoonPanel");
-const adminPanel = document.getElementById("adminPanel");
 
 function showModal() {
   loginModal.classList.remove("hidden");
@@ -25,22 +24,13 @@ function hideModal() {
 }
 
 function unlockAdmin() {
-  hideModal();
-  comingSoonPanel.classList.add("hidden");
-  adminPanel.classList.remove("hidden");
   sessionStorage.setItem("rolll-admin-auth", "true");
-}
-
-function logoutAdmin() {
-  sessionStorage.removeItem("rolll-admin-auth");
-  adminPanel.classList.add("hidden");
-  comingSoonPanel.classList.remove("hidden");
+  window.location.href = "home.html";
 }
 
 openLoginButton.addEventListener("click", showModal);
 closeLoginButton.addEventListener("click", hideModal);
 modalBackdrop.addEventListener("click", hideModal);
-logoutButton.addEventListener("click", logoutAdmin);
 
 loginForm.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -55,6 +45,5 @@ loginForm.addEventListener("submit", (event) => {
 });
 
 if (sessionStorage.getItem("rolll-admin-auth") === "true") {
-  comingSoonPanel.classList.add("hidden");
-  adminPanel.classList.remove("hidden");
+  window.location.href = "home.html";
 }
