@@ -1,13 +1,102 @@
 <!DOCTYPE html>
 <html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benim Sitem</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Cardaga Selam Olsun Websitemiz Açılmış Bulunmaktadır</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rolll Agency | Cok Yakinda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;700;800&family=Manrope:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero-card" id="comingSoonPanel">
+        <p class="eyebrow">Rolll Agency</p>
+        <h1>Cok Yakinda</h1>
+        <p class="lead">
+          Yeni nesil yaratici kampanyalar, cesur marka hikayeleri ve daha fazlasi
+          cok yakinda burada.
+        </p>
+
+        <div class="status-row">
+          <div class="status-pill">
+            <span class="dot"></span>
+            Web sitesi yapim asamasinda
+          </div>
+          <button class="ghost-button" id="openLoginButton" type="button">
+            Admin Girisi
+          </button>
+        </div>
+      </section>
+
+      <section class="admin-panel hidden" id="adminPanel">
+        <div class="admin-panel__header">
+          <div>
+            <p class="eyebrow">Rolll Agency</p>
+            <h2>Admin alani acildi</h2>
+          </div>
+          <button class="ghost-button" id="logoutButton" type="button">
+            Cikis Yap
+          </button>
+        </div>
+
+        <div class="admin-grid">
+          <article class="admin-card">
+            <p class="card-label">Durum</p>
+            <strong>Yayin oncesi hazirlik</strong>
+            <p>Site herkese kapali, sadece admin goruntulemesi aktif.</p>
+          </article>
+          <article class="admin-card">
+            <p class="card-label">Ajans Notu</p>
+            <strong>Rolll Agency lansmana hazirlaniyor</strong>
+            <p>Bu alan daha sonra gercek admin paneline baglanabilir.</p>
+          </article>
+          <article class="admin-card">
+            <p class="card-label">Sonraki Adim</p>
+            <strong>CMS veya backend entegrasyonu</strong>
+            <p>Guvenli sifre kontrolu icin sunucu tarafli dogrulama eklenmeli.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal hidden" id="loginModal" aria-hidden="true">
+      <div class="modal-backdrop" id="modalBackdrop"></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="loginTitle">
+        <button class="close-button" id="closeLoginButton" type="button" aria-label="Kapat">
+          x
+        </button>
+        <p class="eyebrow">Yetkili Girisi</p>
+        <h2 id="loginTitle">Admin sifresi gerekli</h2>
+        <p class="modal-copy">
+          Yonetim alanini acmak icin admin sifresini girin.
+        </p>
+
+        <form id="loginForm" class="login-form">
+          <label for="passwordInput">Sifre</label>
+          <input
+            id="passwordInput"
+            name="password"
+            type="password"
+            placeholder="Admin sifrenizi girin"
+            autocomplete="current-password"
+            required
+          />
+          <button class="primary-button" type="submit">Panele Gir</button>
+          <p class="helper-text">
+            Demo sifre: <code>rolll-admin-2026</code>
+          </p>
+          <p class="error-text hidden" id="errorMessage">
+            Sifre hatali. Lutfen tekrar deneyin.
+          </p>
+        </form>
+      </div>
+    </div>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
