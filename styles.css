@@ -39,6 +39,8 @@ input {
   padding: 36px;
   display: grid;
   place-items: center;
+  align-content: center;
+  gap: 18px;
 }
 
 .hero-card,
@@ -411,6 +413,15 @@ h2 {
 
 .hidden {
   display: none !important;
+}
+
+.site-footer {
+  margin: 0;
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(229, 229, 229, 0.58);
+  text-align: center;
 }
 
 @keyframes pageEnter {
