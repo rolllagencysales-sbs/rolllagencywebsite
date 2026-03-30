@@ -49,6 +49,7 @@ module.exports = async function handler(req, res) {
   const payload = {
     title: safeProductName,
     type: "digital",
+    deliveryType: "digital",
     stockData: {
       stock: 9999
     },
