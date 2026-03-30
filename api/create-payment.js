@@ -41,10 +41,16 @@ module.exports = async function handler(req, res) {
   const safeProductName = productName.slice(0, 120) || "Özel Ödeme Talebi";
 
   // Shopier urun olusturma istegi icin temel payload hazirliyoruz.
+  const host = req.headers["x-forwarded-host"] || req.headers.host;
+  const protocol = req.headers["x-forwarded-proto"] || "https";
+  const baseUrl = process.env.SITE_BASE_URL || `${protocol}://${host}`;
+  const defaultMediaUrl = `${baseUrl}/assets/rolll-logo.png`;
+
   const payload = {
     title: safeProductName,
     type: "physical",
     shippingPayer: "sellerPays",
+    media: [defaultMediaUrl],
     priceData: {
       currency,
       amount: amount.toFixed(2)
@@ -87,12 +93,19 @@ module.exports = async function handler(req, res) {
       data?.data?.url ||
       data?.product?.url ||
       data?.data?.product?.url ||
-      (productId ? `https://www.shopier.com/ShowProductNew/products.php?id=${productId}` : null);
+      data?.productUrl ||
+      data?.data?.productUrl ||
+      data?.permalink ||
+      data?.data?.permalink ||
+      data?.checkoutUrl ||
+      data?.data?.checkoutUrl ||
+      null;
 
     // Url bulunamazsa ham API cevabini gostermek hata ayiklama icin daha faydali olur.
     if (!productUrl) {
       return res.status(200).json({
         message: "Ürün oluşturuldu ancak yönlendirme URL'si bulunamadı.",
+        productId,
         data
       });
     }
