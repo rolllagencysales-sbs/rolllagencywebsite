@@ -95,6 +95,14 @@ module.exports = async function handler(req, res) {
       });
     }
 
+    // Debug modu aciksa ham cevabi gostererek alan isimlerini net goruyoruz.
+    if (req.body?.debug === "1" || req.query?.debug === "1") {
+      return res.status(200).json({
+        message: "Shopier ürün oluşturuldu.",
+        data
+      });
+    }
+
     // Donen veride olasi urun id veya url alanlarini tarayarak yonlendirme adresi buluyoruz.
     const productId =
       data?.id ||
