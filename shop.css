@@ -4,6 +4,62 @@
   position: relative;
 }
 
+/* Serbest tutar odeme ekrani icin panel kapsayicisi. */
+.payment-panel {
+  width: min(100%, 720px);
+  margin: 0 auto;
+  padding: 28px;
+  border-radius: 28px;
+  border: 1px solid rgba(229, 229, 229, 0.08);
+  background: linear-gradient(180deg, rgba(19, 38, 58, 0.98), rgba(13, 27, 42, 0.96));
+  box-shadow: 0 20px 60px rgba(4, 10, 18, 0.32);
+}
+
+/* Form alanlarini alt alta ve okunur araliklarla diziyoruz. */
+.payment-form {
+  display: grid;
+  gap: 18px;
+}
+
+/* Her alanin etiketi ve girdisi uyumlu gorunsun diye blok yapi kullaniyoruz. */
+.payment-field {
+  display: grid;
+  gap: 10px;
+}
+
+/* Alan etiketlerini kisa ama belirgin hale getiriyoruz. */
+.payment-field span {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #e5e5e5;
+}
+
+/* Input stilleri mevcut tema ile uyumlu olacak sekilde olusturuluyor. */
+.payment-field input {
+  width: 100%;
+  border: 1px solid rgba(229, 229, 229, 0.12);
+  border-radius: 18px;
+  padding: 16px 18px;
+  font: inherit;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Focus durumunda kullaniciya aktif alan hissi veriyoruz. */
+.payment-field input:focus {
+  outline: none;
+  border-color: rgba(247, 158, 2, 0.42);
+  box-shadow: 0 0 0 4px rgba(247, 158, 2, 0.12);
+}
+
+/* Alt not ile bu ekranin nasil calistigini kisa sekilde acikliyoruz. */
+.payment-note {
+  margin: 18px 0 0;
+  line-height: 1.8;
+  color: rgba(229, 229, 229, 0.68);
+  text-align: center;
+}
+
 /* Urun listesini modern kartlar halinde gosteren responsive grid yapisi. */
 .product-grid {
   display: grid;

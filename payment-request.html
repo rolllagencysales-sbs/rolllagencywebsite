@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <!-- Temel sayfa ayarlari ve mobil uyumluluk. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rolll Agency | Tutar Bazlı Ödeme Al</title>
+
+    <!-- Ortak tipografi ve mevcut site stilleri. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/rolll-logo.png?v=4" />
+    <link rel="stylesheet" href="admin.css" />
+    <link rel="stylesheet" href="shop.css" />
+  </head>
+  <body data-page="payment-request">
+    <div class="admin-shell">
+      <main class="content">
+        <!-- Mevcut tasarim diliyle uyumlu ust bar. -->
+        <header class="topbar">
+          <div class="topbar__brand">
+            <img src="assets/rolll-logo.png" alt="Rolll Agency logosu" />
+            <div>
+              <p>Rolll Agency</p>
+              <span>Admin Ön İzleme</span>
+            </div>
+          </div>
+          <nav class="topbar__nav" aria-label="Admin menüsü">
+            <a class="topbar__link" href="home.html">Ana Sayfa</a>
+            <a class="topbar__link" href="products.html">Ürünler</a>
+            <a class="topbar__link" href="about.html">Hakkımızda</a>
+            <a class="topbar__link" href="contact.html">İletişim</a>
+          </nav>
+          <button class="topbar__logout" id="logoutButton" type="button">Çıkış Yap</button>
+        </header>
+
+        <!-- Kullanici burada serbest tutar girecek. -->
+        <section class="products-page">
+          <div class="section-heading">
+            <p class="eyebrow">Serbest Ödeme</p>
+            <h1>İstediğin tutarda ödeme oluştur</h1>
+            <p class="lead lead--center">
+              Aşağıya ödeme başlığı ve tutarı gir. Form gönderildiğinde Node.js endpoint’i güvenli şekilde
+              Shopier ödeme formunu oluşturur ve seni ödeme sayfasına yönlendirir.
+            </p>
+          </div>
+
+          <article class="payment-panel">
+            <form id="dynamicPaymentForm" class="payment-form">
+              <!-- Odeme basligi alani. -->
+              <label class="payment-field">
+                <span>Ödeme Başlığı</span>
+                <input
+                  type="text"
+                  name="product_name"
+                  placeholder="Örnek: Özel Tasarım Hizmet Bedeli"
+                  maxlength="120"
+                  value="Özel Ödeme Talebi"
+                />
+              </label>
+
+              <!-- X degiskeni olacak tutar alani. -->
+              <label class="payment-field">
+                <span>Tutar (TL)</span>
+                <input
+                  type="number"
+                  name="amount"
+                  placeholder="Örnek: 1500"
+                  min="1"
+                  step="0.01"
+                  required
+                />
+              </label>
+
+              <!-- Para birimini sade sekilde sabitliyoruz. -->
+              <input type="hidden" name="currency" value="TRY" />
+
+              <!-- Formun hedefi dogrudan Node.js serverless endpoint'i. -->
+              <button class="pay-button" type="submit">Ödeme Oluştur</button>
+            </form>
+
+            <p class="payment-note">
+              Bu form <code>/api/create-payment</code> endpoint’ine gider. Merchant ID frontend’de görünmez,
+              sunucu tarafında kullanılır.
+            </p>
+          </article>
+        </section>
+
+        <p class="site-footer site-footer--admin">Rolll Agency 2026. All rights reserved.</p>
+      </main>
+    </div>
+
+    <!-- Ortak admin davranisi ve form hedefini ayarlayan scriptler. -->
+    <script src="admin.js"></script>
+    <script src="payment-request.js"></script>
+  </body>
+</html>
