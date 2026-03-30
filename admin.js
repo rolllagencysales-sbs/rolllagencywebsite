@@ -1,7 +1,8 @@
 const isAuthed = sessionStorage.getItem("rolll-admin-auth") === "true";
 const logoutButton = document.getElementById("logoutButton");
+const requiresAuth = document.body?.dataset?.protected === "true";
 
-if (!isAuthed) {
+if (requiresAuth && !isAuthed) {
   window.location.href = "index.html";
 }
 
