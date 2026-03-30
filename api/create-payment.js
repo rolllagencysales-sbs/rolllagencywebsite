@@ -50,7 +50,11 @@ module.exports = async function handler(req, res) {
     title: safeProductName,
     type: "physical",
     shippingPayer: "sellerPays",
-    media: [defaultMediaUrl],
+    media: [
+      {
+        url: defaultMediaUrl
+      }
+    ],
     priceData: {
       currency,
       amount: amount.toFixed(2)
