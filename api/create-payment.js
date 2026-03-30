@@ -59,7 +59,7 @@ module.exports = async function handler(req, res) {
     ],
     priceData: {
       currency,
-      amount: amount.toFixed(2)
+      price: amount.toFixed(2)
     }
   };
 
