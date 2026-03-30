@@ -48,12 +48,17 @@ module.exports = async function handler(req, res) {
 
   const payload = {
     title: safeProductName,
+    status: "active",
     type: "digital",
     deliveryType: "digital",
     shippingPayer: "sellerPays",
     stockData: {
-      stock: 9999
+      stock: 9999,
+      quantity: 9999,
+      trackQuantity: false,
+      continueSellingWhenOutOfStock: true
     },
+    quantity: 9999,
     media: [
       {
         type: "image",
