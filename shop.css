@@ -1,0 +1,187 @@
+/* Urun ve durum sayfalari icin ortak renk ve bosluk yardimcilari. */
+.products-page,
+.status-shell {
+  position: relative;
+}
+
+/* Urun listesini modern kartlar halinde gosteren responsive grid yapisi. */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Her urun karti tek bir urunu odakli sekilde sunar. */
+.product-card {
+  padding: 28px;
+  border-radius: 26px;
+  border: 1px solid rgba(229, 229, 229, 0.08);
+  background: linear-gradient(180deg, rgba(19, 38, 58, 0.98), rgba(13, 27, 42, 0.96));
+  box-shadow: 0 20px 60px rgba(4, 10, 18, 0.32);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+/* Kart hover durumunda hafif yukselerek daha interaktif his verir. */
+.product-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(247, 158, 2, 0.28);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.38);
+}
+
+/* Rozet urunun kategorisini veya avantajini belirtir. */
+.product-card__badge {
+  margin: 0;
+  color: #0d1b2a;
+  background: #f79e02;
+  align-self: flex-start;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Urun basligi dikkat cekici ama sade tutulur. */
+.product-card h3 {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  line-height: 1.14;
+}
+
+/* Aciklama metni uzun satirlarda rahat okunacak sekilde ayarlanir. */
+.product-card__description {
+  margin: 0;
+  color: rgba(229, 229, 229, 0.78);
+  line-height: 1.8;
+}
+
+/* Fiyat kullanicinin ilk fark edecegi alanlardan biri oldugu icin belirginlestirilir. */
+.product-card__price {
+  margin: 8px 0 0;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+/* Form alanini sade tutuyoruz cunku bu sayfada tek gorunur aksiyon odeme butonu. */
+.product-card__form {
+  margin-top: auto;
+}
+
+/* Simdi Ode butonu odeme eylemini one cikarir. */
+.pay-button {
+  width: 100%;
+  border: none;
+  border-radius: 18px;
+  padding: 15px 18px;
+  font: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  color: #0d1b2a;
+  background: linear-gradient(135deg, #f79e02, #ffbb47);
+  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+  box-shadow: 0 16px 34px rgba(247, 158, 2, 0.24);
+}
+
+/* Hover durumunda butona daha canli bir his veriyoruz. */
+.pay-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+  box-shadow: 0 18px 36px rgba(247, 158, 2, 0.3);
+}
+
+/* Klavye ile gezen kullanicilar icin gorunur focus stili ekliyoruz. */
+.pay-button:focus-visible,
+.status-link:focus-visible {
+  outline: 3px solid rgba(247, 158, 2, 0.4);
+  outline-offset: 3px;
+}
+
+/* Basari ve hata sayfalarinda ortali tek kartli bir duzen kullaniyoruz. */
+.status-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 20px;
+  background:
+    radial-gradient(circle at top left, rgba(247, 158, 2, 0.14), transparent 24%),
+    linear-gradient(180deg, #142437 0%, #0d1b2a 58%, #09131d 100%);
+  font-family: "Manrope", sans-serif;
+  color: #e5e5e5;
+}
+
+/* Durum karti basari veya hata bilgisini tek odakta sunar. */
+.status-card {
+  width: min(100%, 720px);
+  padding: 36px 30px;
+  border-radius: 28px;
+  border: 1px solid rgba(229, 229, 229, 0.08);
+  background: rgba(13, 27, 42, 0.96);
+  box-shadow: 0 24px 70px rgba(4, 10, 18, 0.42);
+  text-align: center;
+}
+
+/* Ikon alani durumun hissini renk ile guclendirir. */
+.status-card__icon {
+  width: 82px;
+  height: 82px;
+  margin: 0 auto 22px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+/* Basari durumu icin daha olumlu bir ton kullanilir. */
+.status-card--success .status-card__icon {
+  color: #0d1b2a;
+  background: linear-gradient(135deg, #f79e02, #ffd27d);
+}
+
+/* Hata durumu icin uyarici ama tema ile uyumlu daha koyu turuncu ton secilir. */
+.status-card--fail .status-card__icon {
+  color: #fff7e8;
+  background: linear-gradient(135deg, #c26d00, #f79e02);
+}
+
+/* Durum kartlarindaki basliklar okunur bir hiyerarsi kurar. */
+.status-card h1 {
+  max-width: none;
+  margin-bottom: 14px;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+}
+
+/* Aciklama metni gereksiz yogunluk yaratmadan yonlendirme yapar. */
+.status-card p {
+  margin: 0 auto;
+  max-width: 42ch;
+  line-height: 1.85;
+  color: rgba(229, 229, 229, 0.78);
+}
+
+/* Geri donus linki kullaniciyi kolayca yeniden urun sayfasina alir. */
+.status-link {
+  display: inline-flex;
+  margin-top: 24px;
+  padding: 14px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #0d1b2a;
+  background: linear-gradient(135deg, #f79e02, #ffbb47);
+  font-weight: 800;
+}
+
+/* Kucuk ekranlarda nefes alan bir yerlesim koruyoruz. */
+@media (max-width: 640px) {
+  .product-card {
+    padding: 22px;
+  }
+
+  .status-card {
+    padding: 30px 22px;
+  }
+}

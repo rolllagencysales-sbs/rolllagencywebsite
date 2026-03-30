@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <!-- Sayfanin karakter setini ve mobil uyumlulugunu tanimliyoruz. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Sayfa basligi ve arama motoru aciklamasi. -->
+    <title>Rolll Agency | Ürünler</title>
+    <meta
+      name="description"
+      content="Rolll Agency ürün listesi. Seçtiğiniz ürün için Shopier üzerinden güvenli ödeme akışına geçebilirsiniz."
+    />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+
+    <!-- Ortak fontlari yukluyoruz. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon ve ortak stiller. -->
+    <link rel="icon" type="image/png" href="assets/rolll-logo.png?v=4" />
+    <link rel="shortcut icon" type="image/png" href="assets/rolll-logo.png?v=4" />
+    <link rel="apple-touch-icon" href="assets/rolll-logo.png?v=4" />
+    <link rel="stylesheet" href="admin.css" />
+    <link rel="stylesheet" href="shop.css" />
+  </head>
+  <body data-page="products">
+    <div class="admin-shell">
+      <main class="content">
+        <!-- Ust gezinme alani mevcut site yapisiyla uyumlu olacak sekilde kuruluyor. -->
+        <header class="topbar">
+          <div class="topbar__brand">
+            <img src="assets/rolll-logo.png" alt="Rolll Agency logosu" />
+            <div>
+              <p>Rolll Agency</p>
+              <span>Admin Ön İzleme</span>
+            </div>
+          </div>
+          <nav class="topbar__nav" aria-label="Admin menüsü">
+            <a class="topbar__link" href="home.html">Ana Sayfa</a>
+            <a class="topbar__link is-active" href="products.html">Ürünler</a>
+            <a class="topbar__link" href="about.html">Hakkımızda</a>
+            <a class="topbar__link" href="contact.html">İletişim</a>
+          </nav>
+          <button class="topbar__logout" id="logoutButton" type="button">Çıkış Yap</button>
+        </header>
+
+        <!-- Urun listesi alani. Urun kartlari JavaScript ile bu bolume yerlestirilecek. -->
+        <section class="products-page">
+          <div class="section-heading">
+            <p class="eyebrow">Ürün Listesi</p>
+            <h1>Hazır paketleri inceleyin ve doğrudan ödeme adımına geçin</h1>
+            <p class="lead lead--center">
+              Her ürün kartında bulunan <strong>Şimdi Öde</strong> butonu, seçtiğiniz ürüne ait bilgileri
+              Shopier ödeme formuna POST eder. Merchant bilgilerinizi JavaScript dosyasında güncelleyerek
+              akışı hemen kullanabilirsiniz.
+            </p>
+          </div>
+
+          <!-- JavaScript urun kartlarini bu grid'in icine olusturacak. -->
+          <div class="product-grid" id="productGrid"></div>
+        </section>
+
+        <!-- Alt bilgi mevcut site diliyle uyumlu tutuluyor. -->
+        <p class="site-footer site-footer--admin">Rolll Agency 2026. All rights reserved.</p>
+      </main>
+    </div>
+
+    <!-- Ortak admin davranislari ve urun listeleme mantigi burada yukleniyor. -->
+    <script src="admin.js"></script>
+    <script src="products.js"></script>
+  </body>
+</html>

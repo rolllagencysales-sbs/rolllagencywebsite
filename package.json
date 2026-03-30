@@ -1,0 +1,10 @@
+{
+  "name": "rolllagency-vercel-functions",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Rolll Agency icin Vercel Node.js serverless function ornegi",
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=18"
+  }
+}
