@@ -53,7 +53,7 @@ module.exports = async function handler(req, res) {
     media: [
       {
         type: "image",
-        placement: "gallery",
+        placement: 0,
         url: defaultMediaUrl
       }
     ],
