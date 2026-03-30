@@ -52,6 +52,7 @@ module.exports = async function handler(req, res) {
     shippingPayer: "sellerPays",
     media: [
       {
+        type: "image",
         url: defaultMediaUrl
       }
     ],
