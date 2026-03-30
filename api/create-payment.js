@@ -50,6 +50,7 @@ module.exports = async function handler(req, res) {
     title: safeProductName,
     type: "digital",
     deliveryType: "digital",
+    shippingPayer: "sellerPays",
     stockData: {
       stock: 9999
     },
