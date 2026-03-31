@@ -50,6 +50,7 @@ module.exports = async function handler(req, res) {
     title: safeProductName,
     description: `${safeProductName} için özel ödeme bağlantısı`,
     status: "active",
+    customListing: false,
     type: "digital",
     deliveryType: "digital",
     shippingPayer: "sellerPays",
