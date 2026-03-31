@@ -1,12 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
   <head>
-    <!-- Temel sayfa ayarlari ve mobil uyumluluk. -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rolll Agency | Tutar BazlÄ± Ã–deme Al</title>
-
-    <!-- Ortak tipografi ve mevcut site stilleri. -->
+    <title>Rolll Agency | Tutar Bazlı Ödeme Al</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,72 +17,66 @@
   <body data-page="payment-request">
     <div class="admin-shell">
       <main class="content">
-        <!-- Mevcut tasarim diliyle uyumlu ust bar. -->
         <header class="topbar">
           <div class="topbar__brand">
             <img src="assets/rolll-logo.png" alt="Rolll Agency logosu" />
             <div>
               <p>Rolll Agency</p>
-              <span>Admin Ã–n Ä°zleme</span>
+              <span>Admin Ön İzleme</span>
             </div>
           </div>
-          <nav class="topbar__nav" aria-label="Admin menÃ¼sÃ¼">
+          <nav class="topbar__nav" aria-label="Admin menüsü">
             <a class="topbar__link" href="home.html">Ana Sayfa</a>
-            <a class="topbar__link" href="about.html">HakkÄ±mÄ±zda</a>
-            <a class="topbar__link" href="contact.html">Ä°letiÅŸim</a>
+            <a class="topbar__link" href="about.html">Hakkımızda</a>
+            <a class="topbar__link" href="contact.html">İletişim</a>
           </nav>
-          <button class="topbar__logout" id="logoutButton" type="button">Ã‡Ä±kÄ±ÅŸ Yap</button>
+          <button class="topbar__logout" id="logoutButton" type="button">Çıkış Yap</button>
         </header>
 
-        <!-- Kullanici burada serbest tutar girecek. -->
         <section class="products-page">
           <div class="section-heading">
-            <p class="eyebrow">Serbest Ã–deme</p>
-            <h1>Ä°stediÄŸin tutarda Ã¶deme oluÅŸtur</h1>
+            <p class="eyebrow">Serbest Ödeme</p>
+            <h1>İstediğin tutarda ödeme oluştur</h1>
             <p class="lead lead--center">
-              AÅŸaÄŸÄ±ya Ã¶deme baÅŸlÄ±ÄŸÄ± ve tutarÄ± gir. Form gÃ¶nderildiÄŸinde Node.js endpointâ€™i gÃ¼venli ÅŸekilde
-              Shopier Ã¼zerinde bir Ã¼rÃ¼n oluÅŸturmayÄ± dener ve seni o Ã¼rÃ¼nÃ¼n Ã¶deme sayfasÄ±na yÃ¶nlendirir.
+              Aşağıya ödeme başlığı ve tutarı gir. Form gönderildiğinde Node.js endpoint’i güvenli şekilde
+              Shopier üzerinde bir ürün oluşturmayı dener ve seni o ürünün ödeme sayfasına yönlendirir.
             </p>
           </div>
 
           <article class="payment-panel">
             <form id="dynamicPaymentForm" class="payment-form">
-              <!-- Odeme basligi alani. -->
               <label class="payment-field">
-                <span>Ã–deme BaÅŸlÄ±ÄŸÄ±</span>
+                <span>Ödeme Başlığı</span>
                 <input
                   type="text"
                   name="product_name"
-                  placeholder="Ã–rnek: Ã–zel TasarÄ±m Hizmet Bedeli"
+                  placeholder="Örnek: Özel Tasarım Hizmet Bedeli"
                   maxlength="120"
-                  value="Ã–zel Ã–deme Talebi"
+                  value="Özel Ödeme Talebi"
                 />
               </label>
 
-              <!-- X degiskeni olacak tutar alani. -->
               <label class="payment-field">
                 <span>Tutar (TL)</span>
                 <input
                   type="number"
                   name="amount"
-                  placeholder="Ã–rnek: 1500"
+                  placeholder="Örnek: 1500"
                   min="1"
                   step="0.01"
                   required
                 />
               </label>
 
-              <!-- Para birimini sade sekilde sabitliyoruz. -->
               <input type="hidden" name="currency" value="TRY" />
               <input type="hidden" name="debug" value="0" />
 
-              <!-- Formun hedefi dogrudan Node.js serverless endpoint'i. -->
-              <button class="pay-button" type="submit">Ã–deme OluÅŸtur</button>
+              <button class="pay-button" type="submit">Ödeme Oluştur</button>
             </form>
 
             <p class="payment-note">
-              Bu form <code>/api/create-payment</code> endpointâ€™ine gider. Token frontendâ€™de gÃ¶rÃ¼nmez,
-              sunucu tarafÄ±nda kullanÄ±lÄ±r.
+              Bu form <code>/api/create-payment</code> endpoint’ine gider. Token frontend’de görünmez,
+              sunucu tarafında kullanılır.
             </p>
           </article>
         </section>
@@ -94,7 +85,6 @@
       </main>
     </div>
 
-    <!-- Ortak admin davranisi ve form hedefini ayarlayan scriptler. -->
     <script src="admin.js"></script>
     <script src="payment-request.js"></script>
   </body>
