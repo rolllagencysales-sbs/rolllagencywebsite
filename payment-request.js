@@ -11,6 +11,13 @@ document.addEventListener("DOMContentLoaded", () => {
   form.method = "POST";
   form.action = "/api/create-payment";
 
+  // URL'de debug=1 varsa endpoint Shopier'in ham cevabini gosterecek.
+  const debugInput = form.elements.namedItem("debug");
+  const searchParams = new URLSearchParams(window.location.search);
+  if (debugInput && searchParams.get("debug") === "1") {
+    debugInput.value = "1";
+  }
+
   // Basit istemci tarafi dogrulama ile sifirin altindaki veya bos tutarlari engelliyoruz.
   form.addEventListener("submit", (event) => {
     const amountInput = form.elements.namedItem("amount");
