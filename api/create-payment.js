@@ -44,7 +44,7 @@ module.exports = async function handler(req, res) {
   const host = req.headers["x-forwarded-host"] || req.headers.host;
   const protocol = req.headers["x-forwarded-proto"] || "https";
   const baseUrl = process.env.SITE_BASE_URL || `${protocol}://${host}`;
-  const defaultMediaUrl = `${baseUrl}/assets/rolll-logo.png`;
+  const defaultMediaUrl = `${baseUrl}/assets/service-web.png`;
 
   const payload = {
     title: safeProductName,
@@ -73,7 +73,7 @@ module.exports = async function handler(req, res) {
       {
         type: "image",
         placement: 1,
-        title: "Rolll Agency Logo",
+        title: "Özel Ödeme Görseli",
         url: defaultMediaUrl
       }
     ],
