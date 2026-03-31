@@ -1,4 +1,4 @@
-/**
+﻿/**
  * Vercel Serverless Function
  * Bu endpoint kullanicidan gelen X TL bilgisini alir, Shopier API uzerinden
  * gecici bir urun olusturmayi dener ve kullaniciyi urun sayfasina yonlendirir.
@@ -12,7 +12,7 @@ module.exports = async function handler(req, res) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     return res.status(405).json({
-      error: "Sadece POST isteğine izin veriliyor."
+      error: "Sadece POST isteÄŸine izin veriliyor."
     });
   }
 
@@ -21,34 +21,34 @@ module.exports = async function handler(req, res) {
 
   if (!token) {
     return res.status(500).json({
-      error: "SHOPIER_API_TOKEN tanımlı değil."
+      error: "SHOPIER_API_TOKEN tanÄ±mlÄ± deÄŸil."
     });
   }
 
   // Formdan gelen verileri guvenli bicimde okuyoruz.
   const amount = Number(req.body?.amount);
-  const productName = String(req.body?.product_name || "Özel Ödeme Talebi").trim();
+  const productName = String(req.body?.product_name || "Ã–zel Ã–deme Talebi").trim();
   const currency = String(req.body?.currency || "TRY").trim().toUpperCase();
 
   // Hatali veya bos tutar girisini erkenden durduruyoruz.
   if (!Number.isFinite(amount) || amount <= 0) {
     return res.status(400).json({
-      error: "Geçerli bir ödeme tutarı gönderilmedi."
+      error: "GeÃ§erli bir Ã¶deme tutarÄ± gÃ¶nderilmedi."
     });
   }
 
   // Urun adini makul uzunlukta tutuyoruz.
-  const safeProductName = productName.slice(0, 120) || "Özel Ödeme Talebi";
+  const safeProductName = productName.slice(0, 120) || "Ã–zel Ã–deme Talebi";
 
   // Shopier urun olusturma istegi icin temel payload hazirliyoruz.
   const host = req.headers["x-forwarded-host"] || req.headers.host;
   const protocol = req.headers["x-forwarded-proto"] || "https";
   const baseUrl = process.env.SITE_BASE_URL || `${protocol}://${host}`;
-  const defaultMediaUrl = `${baseUrl}/assets/service-web.png`;
+  const defaultMediaUrl = `${baseUrl}/assets/rolll-logo.png`;
 
   const payload = {
     title: safeProductName,
-    description: `${safeProductName} için özel ödeme bağlantısı`,
+    description: `${safeProductName} iÃ§in Ã¶zel Ã¶deme baÄŸlantÄ±sÄ±`,
     status: "active",
     customListing: true,
     type: "digital",
@@ -73,7 +73,7 @@ module.exports = async function handler(req, res) {
       {
         type: "image",
         placement: 1,
-        title: "Özel Ödeme Görseli",
+        title: "Ã–zel Ã–deme GÃ¶rseli",
         url: defaultMediaUrl
       }
     ],
@@ -100,7 +100,7 @@ module.exports = async function handler(req, res) {
     // Shopier hata dondururse detayla birlikte istemciye iletiyoruz.
     if (!response.ok) {
       return res.status(response.status).json({
-        error: "Shopier ürün oluşturma isteği başarısız oldu.",
+        error: "Shopier Ã¼rÃ¼n oluÅŸturma isteÄŸi baÅŸarÄ±sÄ±z oldu.",
         details: data,
         sentPayload: payload
       });
@@ -109,7 +109,7 @@ module.exports = async function handler(req, res) {
     // Debug modu aciksa ham cevabi gostererek alan isimlerini net goruyoruz.
     if (req.body?.debug === "1" || req.query?.debug === "1") {
       return res.status(200).json({
-        message: "Shopier ürün oluşturuldu.",
+        message: "Shopier Ã¼rÃ¼n oluÅŸturuldu.",
         data
       });
     }
@@ -138,7 +138,7 @@ module.exports = async function handler(req, res) {
     // Url bulunamazsa ham API cevabini gostermek hata ayiklama icin daha faydali olur.
     if (!productUrl) {
       return res.status(200).json({
-        message: "Ürün oluşturuldu ancak yönlendirme URL'si bulunamadı.",
+        message: "ÃœrÃ¼n oluÅŸturuldu ancak yÃ¶nlendirme URL'si bulunamadÄ±.",
         productId,
         data
       });
@@ -149,7 +149,7 @@ module.exports = async function handler(req, res) {
   } catch (error) {
     // Beklenmeyen durumlar icin anlasilir bir sunucu hatasi donuyoruz.
     return res.status(500).json({
-      error: "Shopier ürün oluşturulamadı.",
+      error: "Shopier Ã¼rÃ¼n oluÅŸturulamadÄ±.",
       details: error.message
     });
   }

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="tr">
   <head>
     <!-- Temel sayfa ayarlari ve mobil uyumluluk. -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rolll Agency | Tutar Bazlı Ödeme Al</title>
+    <title>Rolll Agency | Tutar BazlÄ± Ã–deme Al</title>
 
     <!-- Ortak tipografi ve mevcut site stilleri. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,26 +26,25 @@
             <img src="assets/rolll-logo.png" alt="Rolll Agency logosu" />
             <div>
               <p>Rolll Agency</p>
-              <span>Admin Ön İzleme</span>
+              <span>Admin Ã–n Ä°zleme</span>
             </div>
           </div>
-          <nav class="topbar__nav" aria-label="Admin menüsü">
+          <nav class="topbar__nav" aria-label="Admin menÃ¼sÃ¼">
             <a class="topbar__link" href="home.html">Ana Sayfa</a>
-            <a class="topbar__link" href="products.html">Ürünler</a>
-            <a class="topbar__link" href="about.html">Hakkımızda</a>
-            <a class="topbar__link" href="contact.html">İletişim</a>
+            <a class="topbar__link" href="about.html">HakkÄ±mÄ±zda</a>
+            <a class="topbar__link" href="contact.html">Ä°letiÅŸim</a>
           </nav>
-          <button class="topbar__logout" id="logoutButton" type="button">Çıkış Yap</button>
+          <button class="topbar__logout" id="logoutButton" type="button">Ã‡Ä±kÄ±ÅŸ Yap</button>
         </header>
 
         <!-- Kullanici burada serbest tutar girecek. -->
         <section class="products-page">
           <div class="section-heading">
-            <p class="eyebrow">Serbest Ödeme</p>
-            <h1>İstediğin tutarda ödeme oluştur</h1>
+            <p class="eyebrow">Serbest Ã–deme</p>
+            <h1>Ä°stediÄŸin tutarda Ã¶deme oluÅŸtur</h1>
             <p class="lead lead--center">
-              Aşağıya ödeme başlığı ve tutarı gir. Form gönderildiğinde Node.js endpoint’i güvenli şekilde
-              Shopier üzerinde bir ürün oluşturmayı dener ve seni o ürünün ödeme sayfasına yönlendirir.
+              AÅŸaÄŸÄ±ya Ã¶deme baÅŸlÄ±ÄŸÄ± ve tutarÄ± gir. Form gÃ¶nderildiÄŸinde Node.js endpointâ€™i gÃ¼venli ÅŸekilde
+              Shopier Ã¼zerinde bir Ã¼rÃ¼n oluÅŸturmayÄ± dener ve seni o Ã¼rÃ¼nÃ¼n Ã¶deme sayfasÄ±na yÃ¶nlendirir.
             </p>
           </div>
 
@@ -53,13 +52,13 @@
             <form id="dynamicPaymentForm" class="payment-form">
               <!-- Odeme basligi alani. -->
               <label class="payment-field">
-                <span>Ödeme Başlığı</span>
+                <span>Ã–deme BaÅŸlÄ±ÄŸÄ±</span>
                 <input
                   type="text"
                   name="product_name"
-                  placeholder="Örnek: Özel Tasarım Hizmet Bedeli"
+                  placeholder="Ã–rnek: Ã–zel TasarÄ±m Hizmet Bedeli"
                   maxlength="120"
-                  value="Özel Ödeme Talebi"
+                  value="Ã–zel Ã–deme Talebi"
                 />
               </label>
 
@@ -69,7 +68,7 @@
                 <input
                   type="number"
                   name="amount"
-                  placeholder="Örnek: 1500"
+                  placeholder="Ã–rnek: 1500"
                   min="1"
                   step="0.01"
                   required
@@ -81,12 +80,12 @@
               <input type="hidden" name="debug" value="0" />
 
               <!-- Formun hedefi dogrudan Node.js serverless endpoint'i. -->
-              <button class="pay-button" type="submit">Ödeme Oluştur</button>
+              <button class="pay-button" type="submit">Ã–deme OluÅŸtur</button>
             </form>
 
             <p class="payment-note">
-              Bu form <code>/api/create-payment</code> endpoint’ine gider. Token frontend’de görünmez,
-              sunucu tarafında kullanılır.
+              Bu form <code>/api/create-payment</code> endpointâ€™ine gider. Token frontendâ€™de gÃ¶rÃ¼nmez,
+              sunucu tarafÄ±nda kullanÄ±lÄ±r.
             </p>
           </article>
         </section>
