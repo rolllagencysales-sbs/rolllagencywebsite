@@ -53,6 +53,8 @@ module.exports = async function handler(req, res) {
     type: "digital",
     deliveryType: "digital",
     shippingPayer: "sellerPays",
+    stockStatus: "inStock",
+    stockQuantity: 9999,
     stock: 9999,
     availableStock: 9999,
     inStock: true,
