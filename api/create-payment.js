@@ -48,13 +48,20 @@ module.exports = async function handler(req, res) {
 
   const payload = {
     title: safeProductName,
+    description: `${safeProductName} için özel ödeme bağlantısı`,
     status: "active",
     type: "digital",
     deliveryType: "digital",
     shippingPayer: "sellerPays",
+    stock: 9999,
+    availableStock: 9999,
+    inStock: true,
     stockData: {
       stock: 9999,
       quantity: 9999,
+      available: 9999,
+      availableStock: 9999,
+      inStock: true,
       trackQuantity: false,
       continueSellingWhenOutOfStock: true
     },
@@ -63,6 +70,7 @@ module.exports = async function handler(req, res) {
       {
         type: "image",
         placement: 1,
+        title: "Rolll Agency Logo",
         url: defaultMediaUrl
       }
     ],
