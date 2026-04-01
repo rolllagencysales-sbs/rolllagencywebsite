@@ -16,6 +16,7 @@ if (logoutButton) {
 const revealTargets = [
   ...document.querySelectorAll(".section-heading"),
   ...document.querySelectorAll(".service-card"),
+  ...document.querySelectorAll(".service-feature"),
   ...document.querySelectorAll(".product-card"),
   ...document.querySelectorAll(".contact-card"),
   ...document.querySelectorAll(".about-row")
