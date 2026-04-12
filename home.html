@@ -6,7 +6,7 @@
     <title>Rolll Agency | Ana Sayfa</title>
     <meta
       name="description"
-      content="Rolll Agency ile markanız için estetik, stratejik ve profesyonel dijital çözümler keşfedin."
+      content="Rolll Agency ile markanız için modern web tasarımı, içerik üretimi ve yaratıcı dijital çözümler keşfedin."
     />
     <meta name="robots" content="noindex, nofollow, noarchive" />
     <meta property="og:locale" content="tr_TR" />
@@ -15,7 +15,7 @@
     <meta property="og:title" content="Rolll Agency | Ana Sayfa" />
     <meta
       property="og:description"
-      content="Rolll Agency ile web, marka ve içerik tarafında güçlü çözümler keşfedin."
+      content="Rolll Agency ile markanız için estetik, stratejik ve profesyonel dijital çözümler keşfedin."
     />
     <meta property="og:image" content="https://www.rolllagency.sbs/assets/rolll-logo.png" />
     <meta property="og:url" content="https://www.rolllagency.sbs/home.html" />
@@ -30,7 +30,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="assets/rolll-logo.png?v=4" />
@@ -40,57 +40,246 @@
   </head>
   <body data-page="home" data-protected="true">
     <div class="admin-shell">
-      <main class="content">
-        <header class="topbar">
-          <div class="topbar__brand">
+      <main class="content home-page">
+        <header class="topbar topbar--site">
+          <a class="topbar__brand topbar__brand--link" href="home.html" aria-label="Rolll Agency ana sayfa">
             <img src="assets/rolll-logo.png" alt="Rolll Agency logosu" />
             <div>
               <p>Rolll Agency</p>
-              <span>Admin Ön İzleme</span>
+              <span>Bursa merkezli yaratıcı ajans</span>
             </div>
-          </div>
-          <nav class="topbar__nav" aria-label="Admin menü">
-            <a class="topbar__link is-active" href="home.html">Ana Sayfa</a>
-            <a class="topbar__link" href="services.html">Hizmetlerimiz</a>
-            <a class="topbar__link" href="about.html">Hakkımızda</a>
-            <a class="topbar__link" href="contact.html">İletişim</a>
+          </a>
+          <nav class="topbar__nav" aria-label="Site menüsü">
+            <a class="topbar__link" href="#hizmetler">Hizmetler</a>
+            <a class="topbar__link" href="#portfoy">Portföy</a>
+            <a class="topbar__link" href="#hakkimizda">Hakkımızda</a>
+            <a class="topbar__link" href="#iletisim">İletişim</a>
           </nav>
-          <button class="topbar__logout" id="logoutButton" type="button">Çıkış Yap</button>
+          <a class="topbar__cta" href="#iletisim">Teklif Al</a>
         </header>
 
-        <section class="about-page hero-panel">
-          <div class="section-heading section-heading--wide">
-            <div class="section-chip">Rolll Agency</div>
-            <h1>Markalara güçlü bir dijital duruş kazandırıyoruz.</h1>
+        <section class="home-hero reveal-on-scroll is-visible">
+          <div class="home-hero__content">
+            <p class="eyebrow">Rolll Agency</p>
+            <h1>Markanız için modern, güven veren ve fark edilir dijital deneyimler tasarlıyoruz.</h1>
+            <p class="lead">
+              Web tasarımından marka diline, içerik üretiminden dijital sunuma kadar markanızı daha güçlü,
+              daha estetik ve daha profesyonel gösterecek yaratıcı çözümler üretiyoruz.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-link primary-link--solid" href="#iletisim">Teklif Al</a>
+              <a class="primary-link primary-link--ghost" href="#portfoy">Portföyü İncele</a>
+            </div>
+            <div class="hero-metrics">
+              <div class="metric-card">
+                <strong>4</strong>
+                <span>Ana hizmet alanı</span>
+              </div>
+              <div class="metric-card">
+                <strong>Bursa</strong>
+                <span>Merkezli yaratıcı yapı</span>
+              </div>
+              <div class="metric-card">
+                <strong>2026</strong>
+                <span>Kuruluş yılı</span>
+              </div>
+            </div>
+          </div>
+          <div class="home-hero__visual">
+            <div class="hero-frame hero-frame--large">
+              <div class="hero-frame__panel hero-frame__panel--main">
+                <span>Web</span>
+                <strong>Strateji, tasarım ve güçlü sunum</strong>
+              </div>
+              <div class="hero-frame__panel hero-frame__panel--side">
+                <span>Marka</span>
+                <strong>Tutarlı görsel dil</strong>
+              </div>
+              <div class="hero-frame__panel hero-frame__panel--bottom">
+                <span>İçerik</span>
+                <strong>Akılda kalıcı yaratıcı dokunuşlar</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-section" id="hizmetler">
+          <div class="section-heading reveal-on-scroll">
+            <div class="section-chip">Hizmetler</div>
+            <h2>Markanızı dijitalde daha güçlü gösterecek ana hizmetlerimiz</h2>
             <p class="lead lead--center">
-              Web, marka ve içerik tarafında estetikle stratejiyi bir araya getiriyor; markaların
-              dijital dünyada daha güven veren, daha dikkat çekici ve daha profesyonel görünmesini
-              sağlıyoruz.
+              Her hizmet alanını hem estetik hem de stratejik açıdan ele alıyor; markanıza özel,
+              sade ve profesyonel çözümler üretiyoruz.
             </p>
           </div>
-
-          <div class="service-grid service-grid--compact">
-            <article class="service-card">
-              <div class="service-card__body">
-                <p class="service-label">Hizmetlerimiz</p>
-                <h3>Tüm hizmet alanlarımızı detaylı inceleyin</h3>
-                <p>Web sitesi tasarımından marka kimliğine, tanıtım videosundan sosyal medya içerik tasarımına kadar sunduğumuz tüm çözümleri ayrı sayfada görebilirsiniz.</p>
-                <a class="primary-link" href="services.html">Hizmetleri Gör</a>
+          <div class="home-services-grid">
+            <article class="service-teaser reveal-on-scroll">
+              <div class="service-teaser__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 5.5h16A1.5 1.5 0 0 1 21.5 7v10A1.5 1.5 0 0 1 20 18.5H4A1.5 1.5 0 0 1 2.5 17V7A1.5 1.5 0 0 1 4 5.5Zm0 1.5V17h16V7H4Zm3 13h10v1.5H7V20Z"/></svg>
               </div>
+              <h3>Web Sitesi Tasarımı</h3>
+              <p>Markanıza özel, hızlı, güvenli ve güçlü ilk izlenim yaratan web deneyimleri tasarlıyoruz.</p>
             </article>
-
-            <article class="service-card">
-              <div class="service-card__body">
-                <p class="service-label">Hakkımızda</p>
-                <h3>Nasıl çalıştığımızı ve bakış açımızı keşfedin</h3>
-                <p>Rolll Agency'nin çalışma yaklaşımını, tasarım anlayışını ve markalarla kurduğu yaratıcı iş birliği modelini detaylı olarak inceleyin.</p>
-                <a class="primary-link" href="about.html">Bizi Tanıyın</a>
+            <article class="service-teaser reveal-on-scroll">
+              <div class="service-teaser__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M5.5 4h13A1.5 1.5 0 0 1 20 5.5v13a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5v-13A1.5 1.5 0 0 1 5.5 4Zm0 1.5v13h13v-13h-13Zm2 3h6v1.5h-6V8.5Zm0 3h9V13h-9v-1.5Zm0 3h5V16h-5v-1.5Z"/></svg>
               </div>
+              <h3>Marka Kimliği</h3>
+              <p>Logodan tipografiye kadar tüm görsel dili tutarlı ve akılda kalıcı bir kimliğe dönüştürüyoruz.</p>
+            </article>
+            <article class="service-teaser reveal-on-scroll">
+              <div class="service-teaser__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 6.5h11a2.5 2.5 0 0 1 2.5 2.5v6A2.5 2.5 0 0 1 15 17.5H4A2.5 2.5 0 0 1 1.5 15V9A2.5 2.5 0 0 1 4 6.5Zm0 1.5A1 1 0 0 0 3 9v6a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1H4Zm15.2 1.15 3.1 2.06a1.5 1.5 0 0 1 0 2.48l-3.1 2.06a.75.75 0 0 1-1.2-.62V9.78a.75.75 0 0 1 1.2-.63Z"/></svg>
+              </div>
+              <h3>Tanıtım Videoları</h3>
+              <p>Markanızın hikayesini kısa sürede güçlü biçimde anlatan etkileyici video ve animasyonlar üretiyoruz.</p>
+            </article>
+            <article class="service-teaser reveal-on-scroll">
+              <div class="service-teaser__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3Zm0 1.5A3 3 0 0 0 4.5 7.5v9a3 3 0 0 0 3 3h9a3 3 0 0 0 3-3v-9a3 3 0 0 0-3-3h-9ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/></svg>
+              </div>
+              <h3>Sosyal Medya İçeriği</h3>
+              <p>Takipçinizle bağ kuran, dikkat çeken ve profesyonel algıyı yükselten içerik tasarımları hazırlıyoruz.</p>
             </article>
           </div>
         </section>
 
-        <p class="site-footer site-footer--admin">Rolll Agency 2026. All rights reserved.</p>
+        <section class="home-section" id="portfoy">
+          <div class="section-heading reveal-on-scroll">
+            <div class="section-chip">Portföy</div>
+            <h2>Farklı markalar için oluşturduğumuz örnek proje görünümü</h2>
+          </div>
+          <div class="portfolio-grid">
+            <article class="portfolio-card reveal-on-scroll">
+              <div class="portfolio-card__visual portfolio-card__visual--web"></div>
+              <h3>E-Ticaret Arayüzü</h3>
+            </article>
+            <article class="portfolio-card reveal-on-scroll">
+              <div class="portfolio-card__visual portfolio-card__visual--brand"></div>
+              <h3>Kurumsal Kimlik Seti</h3>
+            </article>
+            <article class="portfolio-card reveal-on-scroll">
+              <div class="portfolio-card__visual portfolio-card__visual--motion"></div>
+              <h3>Tanıtım Video Konsepti</h3>
+            </article>
+            <article class="portfolio-card reveal-on-scroll">
+              <div class="portfolio-card__visual portfolio-card__visual--social"></div>
+              <h3>Sosyal Medya Grid Tasarımı</h3>
+            </article>
+            <article class="portfolio-card reveal-on-scroll">
+              <div class="portfolio-card__visual portfolio-card__visual--landing"></div>
+              <h3>Landing Page Tasarımı</h3>
+            </article>
+            <article class="portfolio-card reveal-on-scroll">
+              <div class="portfolio-card__visual portfolio-card__visual--editorial"></div>
+              <h3>Editorial Marka Sunumu</h3>
+            </article>
+          </div>
+        </section>
+
+        <section class="home-section home-section--split" id="hakkimizda">
+          <div class="about-summary reveal-on-scroll">
+            <div class="section-chip">Hakkımızda</div>
+            <h2>Yaratıcı bakış açısını stratejik netlikle birleştiren bir ajans yapısı</h2>
+            <p>
+              Rolll Agency, markaların dijital dünyada daha güçlü, daha güven veren ve daha estetik
+              görünmesi için çalışan yaratıcı bir ajanstır. Her projede sade ama etkili çözümleri
+              önceleyerek güçlü marka sunumları oluşturuyoruz.
+            </p>
+          </div>
+          <div class="about-facts reveal-on-scroll">
+            <div class="fact-card">
+              <span>Kuruluş Yılı</span>
+              <strong>2026</strong>
+            </div>
+            <div class="fact-card">
+              <span>Merkez</span>
+              <strong>Bursa</strong>
+            </div>
+            <div class="fact-card">
+              <span>Odak</span>
+              <strong>Web, Marka, İçerik</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="home-section" id="yorumlar">
+          <div class="section-heading reveal-on-scroll">
+            <div class="section-chip">Müşteri Yorumları</div>
+            <h2>Birlikte çalıştığımız markalardan örnek geri bildirimler</h2>
+          </div>
+          <div class="testimonials-grid">
+            <article class="testimonial-card reveal-on-scroll">
+              <p>“Sadece tasarım değil, markamızın sunum biçimi de tamamen değişti. Çok daha profesyonel bir görünüm kazandık.”</p>
+              <strong>Elif Demir</strong>
+              <span>Moda Girişimi Kurucusu</span>
+            </article>
+            <article class="testimonial-card reveal-on-scroll">
+              <p>“Web sitemiz çok daha güçlü bir hale geldi. Hız, görünüm ve genel güven hissi açısından ciddi fark yarattı.”</p>
+              <strong>Burak Yılmaz</strong>
+              <span>İşletme Sahibi</span>
+            </article>
+            <article class="testimonial-card reveal-on-scroll">
+              <p>“İçerik ve görsel dil tarafında istediğimiz netliği ilk kez bu kadar doğru yakaladık. Süreç de çok düzenli ilerledi.”</p>
+              <strong>Zeynep Arslan</strong>
+              <span>Marka Yöneticisi</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="home-section" id="iletisim">
+          <div class="contact-panel reveal-on-scroll">
+            <div class="contact-panel__content">
+              <div class="section-chip">İletişim</div>
+              <h2>Projenizi konuşalım ve markanız için doğru yapıyı birlikte kuralım</h2>
+              <p>
+                Kısa bir brief ile başlayabiliriz. İhtiyacınızı paylaşın; size uygun yönü birlikte netleştirelim.
+              </p>
+            </div>
+            <form class="contact-form" action="mailto:rolllagency.sales@gmail.com" method="post" enctype="text/plain">
+              <label>
+                <span>Ad</span>
+                <input type="text" name="ad" placeholder="Adınız" required />
+              </label>
+              <label>
+                <span>E-posta</span>
+                <input type="email" name="eposta" placeholder="ornek@mail.com" required />
+              </label>
+              <label>
+                <span>Mesaj</span>
+                <textarea name="mesaj" rows="5" placeholder="Projenizden kısaca bahsedin" required></textarea>
+              </label>
+              <button class="primary-link primary-link--solid contact-form__button" type="submit">Gönder</button>
+            </form>
+          </div>
+        </section>
+
+        <footer class="site-footer home-footer reveal-on-scroll">
+          <div class="footer-grid">
+            <div>
+              <strong>Rolll Agency</strong>
+              <p>Web, marka ve içerik tarafında modern dijital çözümler.</p>
+            </div>
+            <div>
+              <strong>İletişim</strong>
+              <p>info@rolllagency.sbs</p>
+              <p>Bursa, Türkiye</p>
+            </div>
+            <div>
+              <strong>Sosyal Medya</strong>
+              <div class="footer-socials">
+                <a href="https://www.instagram.com/rolllagency/" target="_blank" rel="noreferrer" aria-label="Instagram">
+                  <svg viewBox="0 0 24 24"><path d="M7.5 3h9A4.5 4.5 0 0 1 21 7.5v9a4.5 4.5 0 0 1-4.5 4.5h-9A4.5 4.5 0 0 1 3 16.5v-9A4.5 4.5 0 0 1 7.5 3Zm0 1.5A3 3 0 0 0 4.5 7.5v9a3 3 0 0 0 3 3h9a3 3 0 0 0 3-3v-9a3 3 0 0 0-3-3h-9Zm8.75 1.75a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/></svg>
+                </a>
+                <a href="mailto:info@rolllagency.sbs" aria-label="E-posta">
+                  <svg viewBox="0 0 24 24"><path d="M4 6.5h16A1.5 1.5 0 0 1 21.5 8v8A1.5 1.5 0 0 1 20 17.5H4A1.5 1.5 0 0 1 2.5 16V8A1.5 1.5 0 0 1 4 6.5Zm0 1.5v.2l8 5.33 8-5.33V8H4Zm16 8V9.8l-7.58 5.05a.75.75 0 0 1-.84 0L4 9.8V16h16Z"/></svg>
+                </a>
+              </div>
+              <p class="footer-social-handle">@rolllagency</p>
+            </div>
+          </div>
+          <p class="site-footer site-footer--admin">Rolll Agency 2026. All rights reserved.</p>
+        </footer>
       </main>
     </div>
     <script src="admin.js"></script>

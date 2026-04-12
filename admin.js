@@ -14,12 +14,20 @@ if (logoutButton) {
 }
 
 const revealTargets = [
+  ...document.querySelectorAll(".home-hero"),
   ...document.querySelectorAll(".section-heading"),
   ...document.querySelectorAll(".service-card"),
   ...document.querySelectorAll(".service-feature"),
+  ...document.querySelectorAll(".service-teaser"),
+  ...document.querySelectorAll(".portfolio-card"),
   ...document.querySelectorAll(".product-card"),
   ...document.querySelectorAll(".contact-card"),
-  ...document.querySelectorAll(".about-row")
+  ...document.querySelectorAll(".about-row"),
+  ...document.querySelectorAll(".about-summary"),
+  ...document.querySelectorAll(".about-facts"),
+  ...document.querySelectorAll(".testimonial-card"),
+  ...document.querySelectorAll(".contact-panel"),
+  ...document.querySelectorAll(".home-footer")
 ];
 
 if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
